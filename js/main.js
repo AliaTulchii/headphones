@@ -36,7 +36,22 @@ const blurHeader = () => {
 }
 
 window.addEventListener('scroll', blurHeader)
-// swiper favourites
+// swiper favorites
+
+let swiperFavorite = new Swiper('.favorite__swiper', {
+  
+    loop: true,
+    slidesPerView: 'auto',
+    centeredSlides: 'auto',
+    grabCursor: true,
+
+    breakpoints: {
+        768: {
+            slidesPerView: 3,
+        }
+    }
+  });
+
 // show scroll up
 // scroll sections active link
 // scroll reveal animation
