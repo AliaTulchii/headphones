@@ -456,10 +456,26 @@ transform: translate(60px, -40px) scaleX(-1);
 
 .model__button{
   justify-self: center;
-  
+
 }
 /* SPONSOR */
 
+.sponsor__img{
+  width: 100px;
+  transition: transform .4s;
+}
+
+.sponsor__img:hover{
+  transform: scale(1.1);
+}
+
+.sponsor__container{
+  padding-block: .5rem 4.5rem;
+  grid-template-columns: repeat(2, max-content);
+  justify-content: center;
+  align-items: center;
+  gap: 4rem 5rem;
+}
 
 /* FOOTER */
 
