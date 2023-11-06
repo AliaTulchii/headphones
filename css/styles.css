@@ -260,7 +260,7 @@ img {
 
 .home__container{
   position: relative;
-  padding-block: 7rem 1rem;
+  padding-block: 0 1rem;
   row-gap: 2.5rem;  
 
   @media screen and (max-width: 1150px){
