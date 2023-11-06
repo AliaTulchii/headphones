@@ -48,6 +48,9 @@ let swiperFavorite = new Swiper('.favorite__swiper', {
     breakpoints: {
         768: {
             slidesPerView: 3,
+        },
+        1150: {
+            slidesPerView: 3,
         }
     }
   });
@@ -63,4 +66,44 @@ const scrollUp = () => {
 window.addEventListener('scroll', scrollUp)
 
 // scroll sections active link
+
+const sections = document.querySelectorAll('section[id]')
+
+const scrollActive = () => {
+    const scrollDown = window.scrollY
+
+    sections.forEach(current => {
+        const sectionHeight = current.offsetHeight,
+        sectionTop = current.offsetTop - 58,
+        sectionId = current.getAttribute('id'),
+        sectionsClass = document.querySelector('.nav__menu a[href*=' + sectionId + ']')
+    if (scrollDown > sectionTop && scrollDown <= sectionTop + sectionHeight) { 
+        sectionsClass.classList.add('active-link')
+    } else {
+        sectionsClass.classList.remove('active-link')
+    }
+    })
+}
+
+window.addEventListener('scroll', scrollActive)
+
 // scroll reveal animation
+
+const sr = ScrollReveal({
+    origin: 'top',
+    distance: '60px',
+    duration: 2500,
+    delay: 400,
+    // reset: true,
+})
+
+sr.reveal(`.home__social`)
+sr.reveal(`.home__title span:nth-child(1)`, {origin: 'left', opacity: 1})
+sr.reveal(`.home__title span:nth-child(3)`, { origin: 'right', opacity: 1 })
+sr.reveal(`.about__data`, { origin: 'left' })
+sr.reveal(`.about__img, .model__tooltip`, { origin: 'right' })
+sr.reveal(`.model__button`, {origin: 'bottom'})
+
+
+
+
