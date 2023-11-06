@@ -461,7 +461,7 @@ img {
   }
 
   @media screen and (min-width: 1150px) {
-    padding: 120px 0px;
+    padding: 100px 0px;
     grid-template-columns: 400px 500px;
     align-items: center;
     column-gap: 5rem;
@@ -500,7 +500,7 @@ img {
 /* FAVORITE */
 
 .favorite__container{
-  padding-top: 120px ;
+  padding-top: 100px ;
 
   @media screen and (min-width: 1150px) {
     /* padding: 120px 0px; */
