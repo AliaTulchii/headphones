@@ -108,7 +108,7 @@ img {
   padding-block: 5rem 1rem;
 
   @media screen and (min-width: 1150px) {
-    padding-block: 7rem 2rem;
+    padding: 80px 15px;
   }
 }
 
